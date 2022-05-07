@@ -1,7 +1,7 @@
-import { InferedTypeFromArray, StrapiApiError, StrapiApiResponse } from './types/base';
-import { CrudFilter, CrudSorting, DeepFilterType, PopulateDeepOptions } from './types/crud';
+import { InferedTypeFromArray, StrapiApiError, StrapiApiResponse } from '../types/base';
+import { CrudFilter, CrudSorting, DeepFilterType, PopulateDeepOptions } from '../types/crud';
 import { parse, stringify } from 'qs';
-import { generateQueryString, stringToArray } from './helpers';
+import { generateQueryString, stringToArray } from '../helpers';
 
 export abstract class StrapiClientHelper<T> {
   protected url: string;

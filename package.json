@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "nodemon --config nodemon.json src/example/play.ts",
+    "dev": "nodemon --config nodemon.json src/playground/index.ts",
     "lint": "eslint  . --ext .ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "semantic-release": "semantic-release --branches main",

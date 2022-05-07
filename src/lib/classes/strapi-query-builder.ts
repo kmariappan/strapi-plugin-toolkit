@@ -1,8 +1,8 @@
 import { AxiosInstance } from 'axios';
-import { generateQueryString } from './helpers';
+import { generateQueryString } from '../helpers';
 import { StrapiClientHelper } from './strapi-client-helper';
 import { StrapiFilterBuilder } from './strapi-filter-builder';
-import { StrapiApiResponse } from './types/base';
+import { StrapiApiResponse } from '../types/base';
 
 type PostValuesType<T> = {
   data: T;

@@ -1,4 +1,4 @@
-import { StrapiClient } from './lib/strapi-client';
+import { StrapiClient } from './lib/generated/strapi-client';
 import { StrapiClientOptions } from './lib/types/base';
 
 const defaultOptions: StrapiClientOptions = {
