@@ -1,7 +1,6 @@
-import { generateType, generateStringType } from './lib/generator';
 import { StrapiToolkit } from './lib/strapi-toolkit';
-import { StrapiTypeGenerator } from './lib/strapi-type-generator';
+import { StrapiTypeBuilder } from './lib/strapi-type-builder';
 
 const { entity, db } = new StrapiToolkit();
 
-export { generateType, generateStringType, entity, db, StrapiTypeGenerator };
+export { entity, db, StrapiTypeBuilder };

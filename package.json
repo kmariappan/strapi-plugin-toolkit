@@ -1,8 +1,14 @@
 {
-  "name": "@kmariappan/strapi-client-js",
+  "name": "strapi-plugin-toolkit",
   "author": "Karthikeyan Mariappan",
-  "description": "Javascript client for Strapi Rest API",
-  "version": "0.0.0-development",
+  "description": "Content-type generator and utilities for better Developer Experience",
+  "strapi": {
+    "name": "toolkit",
+    "displayName": "Toolkit",
+    "description": "Content-type generator and utilities for better Developer Experience",
+    "kind": "plugin"
+  },
+  "version": "0.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
@@ -22,7 +28,6 @@
     "dev": "nodemon --config nodemon.json src/playground/index.ts",
     "lint": "eslint  . --ext .ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "semantic-release": "semantic-release --branches main",
     "commit": "git-cz"
   },
   "husky": {
@@ -35,7 +40,6 @@
     "qs": "^6.10.3"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.182",
     "@types/node": "^16.9.4",
     "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
@@ -66,9 +70,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kmariappan/strapi-client-js.git"
+    "url": "https://github.com/kmariappan/strapi-plugin-toolkit.git"
   },
-  "dependencies": {
-    "lodash": "^4.17.21"
-  }
+  "dependencies": {},
+  "keywords": [
+    "strapi",
+    "plugin",
+    "toolkit"
+  ]
 }
