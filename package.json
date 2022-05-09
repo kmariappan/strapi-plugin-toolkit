@@ -8,7 +8,7 @@
     "description": "Content-type generator and utilities for better Developer Experience",
     "kind": "plugin"
   },
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
