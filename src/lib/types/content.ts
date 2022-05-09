@@ -1,4 +1,5 @@
-export type ContentType<T extends string> = Record<T, Content>;
+export type ContentKeys = string;
+export type ContentType = Record<ContentKeys, Content>;
 
 export type Content = {
   collectionName: string;

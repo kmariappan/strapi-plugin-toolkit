@@ -13,3 +13,20 @@ export const isBrowser = () => typeof window !== 'undefined';
 export const stringToArray = (value: string): string[] => {
   return value.split('.');
 };
+
+const capitalize = (name: string): string => {
+  return name.charAt(0).toUpperCase() + name.slice(1);
+};
+
+export const toCamelCase = (name: string): string => {
+  let manipulatedName = '';
+  const ennamo = name.split(/[.\-_]/);
+  ennamo.forEach((enna, index) => {
+    if (index === 0) {
+      manipulatedName = `${enna}`;
+    } else {
+      manipulatedName = `${manipulatedName}${capitalize(enna)}`;
+    }
+  });
+  return manipulatedName;
+};

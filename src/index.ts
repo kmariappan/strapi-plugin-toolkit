@@ -1,37 +1,7 @@
-import { StrapiClient } from './lib/generated/strapi-client';
-import { StrapiClientOptions } from './lib/types/base';
+import { generateType, generateStringType } from './lib/generator';
+import { StrapiToolkit } from './lib/strapi-toolkit';
+import { StrapiTypeGenerator } from './lib/strapi-type-generator';
 
-const defaultOptions: StrapiClientOptions = {
-  url: '',
-  normalizeData: true,
-};
+const { entity, db } = new StrapiToolkit();
 
-/**
- * Strapi Client Options Object
- *
- * @param url Strapi application url
- *
- * @param apiToken Authorized Api Token
- *
- * @param normalizeData Disables Unified response format. default - true
- *
- * @param headers custom headers
- *
- * @param debug Query log on development. default - false
- *
- * @param persistSession Using browser localstorage to save the current session. default- flase
- *
- */
-const createClient = (options: StrapiClientOptions): StrapiClient => {
-  return new StrapiClient({ ...defaultOptions, ...options });
-};
-
-export { createClient, StrapiClient };
-export type {
-  StrapiUnifiedResponse,
-  StrapiTimestamp,
-  StrapiPopulatedResponse,
-  StrapiClientOptions,
-} from './lib/types/base';
-export type { SignInCredentials, SignUpCredentials } from './lib/types/auth';
-export type { StrapiImage } from './lib/types/image';
+export { generateType, generateStringType, entity, db, StrapiTypeGenerator };
