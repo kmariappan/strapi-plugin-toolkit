@@ -1,10 +1,8 @@
-import { EntityAbstractServiceType, EntityResponse } from "../../types"
+import { EntityAbstractServiceType, EntityResponse } from '../../types';
 
-export const entityAbstractService = ({
-  strapi,
-}: any): EntityAbstractServiceType => ({
+export const entityAbstractService = ({ strapi }: any): EntityAbstractServiceType => ({
   getWelcomeMessage() {
-    return "You have landed in dream Place 🚀"
+    return 'You have landed in dream Place 🚀';
   },
 
   async findMany(collectionName, options): Promise<EntityResponse> {
@@ -14,31 +12,31 @@ export const entityAbstractService = ({
           ...options,
         })
         .then((res: any) => {
-          resolve(response({ data: res, error: null }))
+          resolve(response({ data: res, error: null }));
         })
         .catch((e: Error) => {
           if (e) {
-            resolve(response({ data: null, error: e.message }))
+            resolve(response({ data: null, error: e.message }));
           }
-        })
-    })
+        });
+    });
   },
 
   async findOne(collectionName, id, options): Promise<EntityResponse> {
-    return new Promise<EntityResponse>(async (resolve) => {
+    return new Promise<EntityResponse>((resolve) => {
       strapi.entityService
         .findOne(collectionName, id, {
           ...options,
         })
         .then((res: any) => {
-          resolve(response({ data: res, error: null }))
+          resolve(response({ data: res, error: null }));
         })
         .catch((e: Error) => {
           if (e) {
-            resolve(response({ data: null, error: e.message }))
+            resolve(response({ data: null, error: e.message }));
           }
-        })
-    })
+        });
+    });
   },
 
   async create(collectionName, values): Promise<EntityResponse> {
@@ -46,14 +44,14 @@ export const entityAbstractService = ({
       strapi.entityService
         .create(collectionName, { data: values })
         .then((res: any) => {
-          resolve(response({ data: res, error: null }))
+          resolve(response({ data: res, error: null }));
         })
         .catch((e: Error) => {
           if (e) {
-            resolve(response({ data: null, error: e.message }))
+            resolve(response({ data: null, error: e.message }));
           }
-        })
-    })
+        });
+    });
   },
 
   async update(collectionName, id, values): Promise<EntityResponse> {
@@ -61,14 +59,14 @@ export const entityAbstractService = ({
       strapi.entityService
         .update(collectionName, id, { data: values })
         .then((res: any) => {
-          resolve(response({ data: res, error: null }))
+          resolve(response({ data: res, error: null }));
         })
         .catch((e: Error) => {
           if (e) {
-            resolve(response({ data: null, error: e.message }))
+            resolve(response({ data: null, error: e.message }));
           }
-        })
-    })
+        });
+    });
   },
 
   async delete(collectionName, id): Promise<EntityResponse> {
@@ -76,24 +74,21 @@ export const entityAbstractService = ({
       strapi.entityService
         .delete(collectionName, id)
         .then((res: any) => {
-          resolve(response({ data: res, error: null }))
+          resolve(response({ data: res, error: null }));
         })
         .catch((e: Error) => {
           if (e) {
-            resolve(response({ data: null, error: e.message }))
+            resolve(response({ data: null, error: e.message }));
           }
-        })
-    })
+        });
+    });
   },
-})
+});
 
-const response = ({
-  data,
-  error,
-}: Omit<EntityResponse, "success">): EntityResponse => {
+const response = ({ data, error }: Omit<EntityResponse, 'success'>): EntityResponse => {
   return {
     success: error ? false : true,
     data,
     error,
-  }
-}
+  };
+};

@@ -1,5 +1,5 @@
-import { entityRoutes } from "./entity.route"
+import { entityRoutes } from './entity.route';
 
-const routes = [...entityRoutes]
+const routes = [...entityRoutes];
 
-export default routes
+export default routes;

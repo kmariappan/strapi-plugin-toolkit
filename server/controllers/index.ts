@@ -1,11 +1,12 @@
-import { entityController } from "./entity.controller"
+/* eslint-disable @typescript-eslint/ban-types */
+import { entityController } from './entity.controller';
 
 type PluginControllers = {
-  [key: string]: Function | Object
-}
+  [key: string]: Function | Object;
+};
 
 const controllers: PluginControllers = {
   entityController,
-}
+};
 
-export default controllers
+export default controllers;

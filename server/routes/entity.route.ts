@@ -1,26 +1,26 @@
 export const entityRoutes = [
   {
-    method: "GET",
-    path: "/",
-    handler: "entityController.index",
+    method: 'GET',
+    path: '/',
+    handler: 'entityController.index',
     config: {
       policies: [],
       auth: false,
     },
   },
   {
-    method: "GET",
-    path: "/entity/:collectionName",
-    handler: "entityController.getEntities",
+    method: 'GET',
+    path: '/entity/:collectionName',
+    handler: 'entityController.getEntities',
     config: {
       policies: [],
       auth: false,
     },
   },
   {
-    method: "GET",
-    path: "/entity/:collectionName/:id",
-    handler: "entityController.getEntityById",
+    method: 'GET',
+    path: '/entity/:collectionName/:id',
+    handler: 'entityController.getEntityById',
     config: {
       policies: [],
       auth: false,
@@ -28,9 +28,9 @@ export const entityRoutes = [
   },
 
   {
-    method: "POST",
-    path: "/entity/:collectionName",
-    handler: "entityController.createEntity",
+    method: 'POST',
+    path: '/entity/:collectionName',
+    handler: 'entityController.createEntity',
     config: {
       policies: [],
       auth: false,
@@ -38,9 +38,9 @@ export const entityRoutes = [
   },
 
   {
-    method: "PUT",
-    path: "/entity/:collectionName/:id",
-    handler: "entityController.updateEntity",
+    method: 'PUT',
+    path: '/entity/:collectionName/:id',
+    handler: 'entityController.updateEntity',
     config: {
       policies: [],
       auth: false,
@@ -48,12 +48,12 @@ export const entityRoutes = [
   },
 
   {
-    method: "DELETE",
-    path: "/entity/:collectionName/:id",
-    handler: "entityController.deleteEntity",
+    method: 'DELETE',
+    path: '/entity/:collectionName/:id',
+    handler: 'entityController.deleteEntity',
     config: {
       policies: [],
       auth: false,
     },
   },
-]
+];

@@ -1,7 +1,7 @@
-import { entityAbstractService } from "./entity.service"
+import { entityAbstractService } from './entity.service';
 
 const services = {
   entityAbstractService,
-}
+};
 
-export default services
+export default services;
