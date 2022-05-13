@@ -24,15 +24,11 @@
   "include": [
     "./server/**/*",
     "./admin/**/*",
+    "./generated/**/*",
     "./strapi-server.*",
     "./strapi-admin.*",
     "./setup-package.ts",
     "./permissions.*"
   ],
-  "exclude": [
-    "**/node_modules/**/*",
-    "**/__tests__/**/*",
-    "**/__mocks__/**/*",
-    "**/build/**/*"
-  ]
+  "exclude": ["**/node_modules/**/*", "**/__tests__/**/*", "**/__mocks__/**/*", "**/build/**/*"]
 }

@@ -71,6 +71,9 @@
     "plugin",
     "toolkit"
   ],
+  "main": "generated/index.js",
+  "module": "generated/index.mjs",
+  "typings": "generated/index.d.ts",
   "nodemonConfig": {
     "restartable": "rs",
     "ignore": [
