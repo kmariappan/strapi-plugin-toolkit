@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-toolkit",
-  "author": "Karthikeyan Mariappan",
+  "version": "0.0.1",
   "description": "Content-type generator and utilities for better Developer Experience",
   "strapi": {
     "name": "toolkit",
@@ -8,22 +8,15 @@
     "description": "Content-type generator and utilities for better Developer Experience",
     "kind": "plugin"
   },
-  "version": "0.0.1",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "typings": "dist/index.d.ts",
   "license": "MIT",
   "engines": {
     "node": ">=14"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "compile": "npm run clean && npm run build && node build/setup-package.js",
     "build": "tsc && yarn copy-translations",
     "build:dev": "yarn run build && cp ./package.json ./build",
     "copy-translations": "copyfiles admin/src/translations/*.json build/",
@@ -37,6 +30,7 @@
       "pre-commit": "npm run prettier-format && npm run lint"
     }
   },
+  "author": "Karthikeyan Mariappan",
   "peerDependencies": {
     "axios": "^0.27.2",
     "qs": "^6.10.3"

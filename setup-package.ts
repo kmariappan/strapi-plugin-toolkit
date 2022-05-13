@@ -29,14 +29,14 @@ function main() {
     `${sourceDirectory}/README.md`,
     `${destinationDirectory}/README.md`
   )
-  fs.copyFileSync(
+/*   fs.copyFileSync(
     `${sourceDirectory}/LICENSE.md`,
     `${destinationDirectory}/.npmignore`
   )
   fs.copyFileSync(
     `${sourceDirectory}/.npmignore`,
     `${destinationDirectory}/.npmignore`
-  )
+  ) */
 }
 
 main()
