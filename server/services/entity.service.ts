@@ -2,7 +2,7 @@ import { EntityAbstractServiceType, EntityResponse } from '../../types';
 
 export const entityAbstractService = ({ strapi }: any): EntityAbstractServiceType => ({
   getWelcomeMessage() {
-    return 'You have landed in dream Place 🚀';
+    return 'You have landed in the dream Place 🚀';
   },
 
   async findMany(collectionName, options): Promise<EntityResponse> {
