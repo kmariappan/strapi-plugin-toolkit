@@ -125,9 +125,9 @@ Please look at [strapi-client-js](https://github.com/kmariappan/strapi-client-js
 
 # Todo
 
-## Custom Config
 - Custom target folder for generated files.
 - Custom selection of the contents to generate types or disable. 
+- Integration between this plugin to [strapi-client-js](https://github.com/kmariappan/strapi-client-js) for generate types on the client side.
 ## Server
 - Provide Entity service to other plugin
 - Query Engine API
