@@ -5,6 +5,7 @@ export const entityRoutes = [
     handler: 'entityController.index',
     config: {
       policies: [],
+      auth: false,
     },
   },
   {
@@ -12,7 +13,7 @@ export const entityRoutes = [
     path: '/entity/:collectionName',
     handler: 'entityController.getEntities',
     config: {
-      policies: [],
+      policies: ['admin::isAuthenticatedAdmin'],
     },
   },
   {
@@ -20,7 +21,7 @@ export const entityRoutes = [
     path: '/entity/:collectionName/:id',
     handler: 'entityController.getEntityById',
     config: {
-      policies: [],
+      policies: ['admin::isAuthenticatedAdmin'],
     },
   },
 
@@ -29,7 +30,7 @@ export const entityRoutes = [
     path: '/entity/:collectionName',
     handler: 'entityController.createEntity',
     config: {
-      policies: [],
+      policies: ['admin::isAuthenticatedAdmin'],
     },
   },
 
@@ -38,7 +39,7 @@ export const entityRoutes = [
     path: '/entity/:collectionName/:id',
     handler: 'entityController.updateEntity',
     config: {
-      policies: [],
+      policies: ['admin::isAuthenticatedAdmin'],
     },
   },
 
@@ -47,7 +48,7 @@ export const entityRoutes = [
     path: '/entity/:collectionName/:id',
     handler: 'entityController.deleteEntity',
     config: {
-      policies: [],
+      policies: ['admin::isAuthenticatedAdmin'],
     },
   },
 ];

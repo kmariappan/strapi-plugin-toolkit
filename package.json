@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-toolkit",
-  "version": "0.1.0-beta.4",
+  "version": "0.1.0-beta.6",
   "description": "Content-type generator and utilities for better Developer Experience",
   "strapi": {
     "name": "toolkit",
