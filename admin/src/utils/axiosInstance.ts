@@ -1,38 +1,39 @@
-import axios from "axios"
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import axios from 'axios';
 // @ts-ignore
-import { auth } from "@strapi/helper-plugin"
-import { AnyType } from "../../../types/common"
+import { auth } from '@strapi/helper-plugin';
+import { AnyType } from '../../../types/common';
 
 const instance = axios.create({
   baseURL: process.env.STRAPI_ADMIN_BACKEND_URL,
-})
+});
 
 instance.interceptors.request.use(
   async (config: AnyType) => {
     config.headers = {
       Authorization: `Bearer ${auth.getToken()}`,
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    }
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    };
 
-    return config
+    return config;
   },
   (error) => {
-    Promise.reject(error)
+    Promise.reject(error);
   }
-)
+);
 
 instance.interceptors.response.use(
   (response) => response,
   (error) => {
     // whatever you want to do with the error
     if (error.response?.status === 401) {
-      auth.clearAppStorage()
-      window.location.reload()
+      auth.clearAppStorage();
+      window.location.reload();
     }
 
-    throw error
+    throw error;
   }
-)
+);
 
-export default instance
+export default instance;

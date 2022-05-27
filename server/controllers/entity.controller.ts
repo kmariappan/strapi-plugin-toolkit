@@ -1,4 +1,4 @@
-import { EntityAbstractServiceType } from '../../types';
+import { EntityAbstractServiceType } from 'types';
 
 export const entityController = ({ strapi }: any) => ({
   getEntityAbstractService(): EntityAbstractServiceType {
