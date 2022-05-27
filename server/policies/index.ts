@@ -1,3 +1,3 @@
-const policies = {}
+const policies = {};
 
-export default policies
+export default policies;

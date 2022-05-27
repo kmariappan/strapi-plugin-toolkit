@@ -1,14 +1,12 @@
 # strapi-plugin-toolkit
 
 Content-type generator and utilities for better Developer Experience.
-
-it generates content types and content objects to make CRUD simple with IntelliSense.
-
-if you use in typescript projects will give type inference and required filed error while createing new content.
+It generates content types and content objects to make CRUD simple with IntelliSense.
+Using typescript projects will give type inference and required filed errors while creating new content.
 
 
 ⚠️ Before We Get Started
-### This is Development version and not stable.
+### This is a Development version and not stable.
 
 ## Installation
 
@@ -23,8 +21,7 @@ yarn add strapi-plugin-toolkit recursive-copy @kmariappan/strapi-type-generator 
 ```
 
 # Step 1
-
-After installation create a config file as toolkit.config.js in the app Root directory with the following code.
+After installation, create a config file as toolkit.config.js in the app Root directory with the following code.
 
 ```js
 const fs = require("fs");
@@ -121,15 +118,15 @@ export default memo(HomePage);
 ```
 
 ### Note
-Please look at [strapi-client-js](https://github.com/kmariappan/strapi-client-js) documentation for more filter and populate options until release of this plugin.
+Please look at [strapi-client-js](https://github.com/kmariappan/strapi-client-js) documentation for more filter and populate options until the release of this plugin.
 
 # Todo
 
 - Custom target folder for generated files.
-- Custom selection of the contents to generate types or disable. 
-- Integration between this plugin to [strapi-client-js](https://github.com/kmariappan/strapi-client-js) for generate types on the client side.
+- A custom selection of the contents to generate types or disable. 
+- Integration between this plugin to [strapi-client-js](https://github.com/kmariappan/strapi-client-js) for generating types on the client-side.
 ## Server
-- Provide Entity service to other plugin
+- Provide Entity service to another plugin
 - Query Engine API
 
 ## Admin
@@ -141,7 +138,7 @@ Please look at [strapi-client-js](https://github.com/kmariappan/strapi-client-js
 
 
 
-### Please feel free to give a ideas  ;-)
+### Please feel free to give ideas ;-)
 
 ### Credits
-This typescript repository structure of this plugin inspired from [strapi-plugin-comments](https://github.com/VirtusLab-Open-Source/strapi-plugin-comments).
+This typescript repository structure of this plugin is inspired by [strapi-plugin-comments](https://github.com/VirtusLab-Open-Source/strapi-plugin-comments)](https://github.com/VirtusLab-Open-Source/strapi-plugin-comments).

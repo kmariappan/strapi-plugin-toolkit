@@ -5,7 +5,6 @@ export const entityRoutes = [
     handler: 'entityController.index',
     config: {
       policies: [],
-      auth: false,
     },
   },
   {
@@ -14,7 +13,6 @@ export const entityRoutes = [
     handler: 'entityController.getEntities',
     config: {
       policies: [],
-      auth: false,
     },
   },
   {
@@ -23,7 +21,6 @@ export const entityRoutes = [
     handler: 'entityController.getEntityById',
     config: {
       policies: [],
-      auth: false,
     },
   },
 
@@ -33,7 +30,6 @@ export const entityRoutes = [
     handler: 'entityController.createEntity',
     config: {
       policies: [],
-      auth: false,
     },
   },
 
@@ -43,7 +39,6 @@ export const entityRoutes = [
     handler: 'entityController.updateEntity',
     config: {
       policies: [],
-      auth: false,
     },
   },
 
@@ -53,7 +48,6 @@ export const entityRoutes = [
     handler: 'entityController.deleteEntity',
     config: {
       policies: [],
-      auth: false,
     },
   },
 ];

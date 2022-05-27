@@ -1,6 +1,6 @@
-import { Primitive, StringMap } from "./common";
+import { Primitive, StringMap } from './common';
 
-export type ContentType = "collectionType" | "singleType";
+export type ContentType = 'collectionType' | 'singleType';
 
 export type StrapiContentTypeInfo = {
   singularName: string;
@@ -20,62 +20,58 @@ export type StrapiContentTypeAttributeValidator = {
   default?: Primitive;
 };
 export type SimpleStrapiContentTypeAttributeKeys =
-  | "string"
-  | "text"
-  | "richtext"
-  | "email"
-  | "password"
-  | "date"
-  | "time"
-  | "datetime"
-  | "timestamp"
-  | "boolean"
-  | "integer"
-  | "biginteger"
-  | "float"
-  | "decimal"
-  | "json";
+  | 'string'
+  | 'text'
+  | 'richtext'
+  | 'email'
+  | 'password'
+  | 'date'
+  | 'time'
+  | 'datetime'
+  | 'timestamp'
+  | 'boolean'
+  | 'integer'
+  | 'biginteger'
+  | 'float'
+  | 'decimal'
+  | 'json';
 
 export type SimpleStrapiContentTypeAttribute = {
   type: SimpleStrapiContentTypeAttributeKeys;
 } & StrapiContentTypeAttributeValidator;
 
 export type StrapiContentTypeEnumerationAttribute = {
-  type: "enumeration";
+  type: 'enumeration';
   enum: Array<string>;
 } & StrapiContentTypeAttributeValidator;
 
 export type StrapiContentTypeComponentAttribute = {
-  type: "component";
+  type: 'component';
   component: string;
   repeatable?: boolean;
 };
 
 export type StrapiContentTypeDynamicZoneAttribute = {
-  type: "dynamiczone";
+  type: 'dynamiczone';
   components: Array<string>;
 };
 
 export type StrapiContentTypeMediaAttribute = {
-  type: "media";
-  allowedTypes: Array<"images" | "videos" | "files">;
+  type: 'media';
+  allowedTypes: Array<'images' | 'videos' | 'files'>;
   required?: boolean;
 };
 
 export type StrapiContentTypeUIDAttribute<T extends string = string> = {
-  type: "uid";
+  type: 'uid';
   targetField: T;
   options: string;
 };
 
-export type StrapiContentTypeRelationType =
-  | "oneToOne"
-  | "oneToMany"
-  | "manyToOne"
-  | "manyToMany";
+export type StrapiContentTypeRelationType = 'oneToOne' | 'oneToMany' | 'manyToOne' | 'manyToMany';
 
 export type StrapiContentTypeRelationAttribute = {
-  type: "relation";
+  type: 'relation';
   relation: StrapiContentTypeRelationType;
   target: string;
   mappedBy?: string;
@@ -106,5 +102,5 @@ export type StrapiContentTypeFullSchema<TAttributes extends string = string> = {
 
 export type StrapiContentTypeSchema<TAttributes extends string = string> = Pick<
   StrapiContentTypeFullSchema<TAttributes>,
-  "info" | "kind" | "attributes" | "options"
+  'info' | 'kind' | 'attributes' | 'options'
 >;
