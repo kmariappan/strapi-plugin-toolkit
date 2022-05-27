@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-toolkit",
-  "version": "0.1.0-beta.6",
+  "version": "0.1.0-beta.7",
   "description": "Content-type generator and utilities for better Developer Experience",
   "strapi": {
     "name": "toolkit",
@@ -16,6 +16,7 @@
     "access": "public"
   },
   "scripts": {
+    "publish": "yarn compile && cd build && npm publish",
     "compile": "npm run clean && npm run build && node build/setup-package.js",
     "build": "tsc && yarn copy-translations",
     "build:dev": "yarn run build && cp ./package.json ./build",
@@ -65,7 +66,7 @@
     "url": "https://github.com/kmariappan/strapi-plugin-toolkit.git"
   },
   "dependencies": {
-    "@kmariappan/strapi-type-generator": "^1.1.5",
+    "@kmariappan/strapi-type-generator": "*",
     "recursive-copy": "^2.0.14",
     "typescript": "4.6.4"
   },
